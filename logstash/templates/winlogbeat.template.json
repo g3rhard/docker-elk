@@ -1,4 +1,4 @@
-#file: logstash/templates/winlogbeat.template.json
+# file: logstash/templates/winlogbeat.template.json
 {
   "mappings": {
     "_default_": {

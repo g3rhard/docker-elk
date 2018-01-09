@@ -23,8 +23,9 @@ services:
       - ./logstash/pipeline:/usr/share/logstash/pipeline
       - ./logstash/templates:/etc/logstash/templates:ro
     ports:
-      - "5000:5000"
-      - "5044:5044"
+      - "5000:5000"  # default
+      - "5044:5044"  # for 01-winlogbeat.conf
+      - "5140:5140"  # for 02-mikrotik.conf
     environment:
       LS_JAVA_OPTS: "-Xmx1024m -Xms1024m"
     networks:
